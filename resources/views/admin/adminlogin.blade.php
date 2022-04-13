@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon-homlisti.svg">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <!-- Bootstrap Css Start Here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <!-- Animate Css Start Here -->
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- Owl Carousel Start Here -->
@@ -32,7 +32,7 @@
     <!-- Pannellum -->
     <link rel="stylesheet" href="css/pannellum.css">
     <!-- Style Css Start Here -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
     <!-- Google Font Start Here -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
