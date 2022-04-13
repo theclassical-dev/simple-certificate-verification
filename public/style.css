@@ -1,0 +1,148 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+}
+
+.top-header{
+	background-color: #121d33;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+a{
+	text-decoration: none;
+}
+
+.top-header img{
+	margin-left: 2%;
+}
+
+.exp-header{
+	background-color: #fff;
+	/*height: 70px;*/
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2% 0 2%;
+	box-sizing: border-box;
+}
+
+.exp-header p{
+	color: #828b9e;
+	font-size: 1.2rem;
+}
+
+.info-block{
+	background-color: #fff;
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 2% 0 2%;
+	box-sizing: border-box;
+}
+
+.info-block .qr-block{
+	border: 1px solid #eee;
+	padding: 20px;
+	border-radius: 3px;
+}
+
+.info-block .details{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.info-block .details .d1{
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid #dfe3eb;
+	height: auto;
+}
+
+.info-block .details .d1 .p1{
+	display: flex;
+	justify-content: flex-start;
+	width: 40%;
+}
+
+.info-block .details .d1 .p2{
+	width: 60%;
+	display: flex;
+	justify-content: flex-start;
+	text-overflow: ellipsis;
+}
+
+
+.trans-block{
+	background-color: #fff;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 2% 0 2%;
+	box-sizing: border-box;
+}
+
+.trans-block .trans{
+	display: flex;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.trans-block .trans .sg{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 5px;
+}
+
+
+.trans-block .trans .sg .amt{
+	padding: 5px 10px;
+	background-color: rgba(0, 135, 90,.2);
+	color: rgb(0, 135, 90);
+	border-radius: 5px;
+}
+
+.trans-block .trans .sg .cft{
+	padding: 5px 10px;
+	background-color: rgba(37, 95, 154,.2);
+	color: rgb(37, 95, 154);
+	border-radius: 5px;
+}
+
+.trans-block .trans .p1{
+	display: flex;
+	width: 40%;
+	justify-content: space-between;
+}
+.trans-block .trans .mdl{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.trans-block .trans .mdl svg{
+	color: red;
+}
+.trans-block .trans .p2{
+	display: flex;
+	width: 40%;
+	justify-content: space-between;
+}
