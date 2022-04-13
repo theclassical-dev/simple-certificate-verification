@@ -229,7 +229,13 @@
 					</div>
 					<div class="form-group">
 						<label>Attendance *</label>
-						<input type="text" name="status" class="form-control" value="{{ old('status') }}" placeholder="e.g present or missed">
+						{{-- <input type="text" name="status" class="form-control" value="{{ old('status') }}" placeholder="e.g present or missed"> --}}
+						<select class="form-control" name="status">
+							<option value="{{old('status')}}"></option>
+							<option value=""></option>
+							<option value="present">Present</option>
+							<option value="missed">Missed</option>
+						</select>
 					</div>
 			</div>
 			<div class="modal-footer modal-footer-uniform">
