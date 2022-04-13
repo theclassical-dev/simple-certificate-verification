@@ -15,7 +15,7 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->id();
-            $table->String('Ip')->nullable();
+            $table->String('IP')->nullable();
             $table->String('State')->nullable();
             $table->String('LGA')->nullable();
             $table->String('Datim_Code')->nullable();
