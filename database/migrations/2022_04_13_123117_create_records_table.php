@@ -20,10 +20,10 @@ class CreateRecordsTable extends Migration
             $table->String('LGA')->nullable();
             $table->String('Datim_Code')->nullable();
             $table->String('FacilityName')->nullable();
-            $table->String('PepId')->nullable();
+            $table->String('PepID')->nullable();
             $table->String('Sex')->nullable();
             $table->String('ARTStartDate')->nullable();
-            $table->String('DAYsOnArt')->nullable();
+            $table->String('DaysOnART')->nullable();
             $table->String('LastPickupdate')->nullable();
             $table->String('Clinic_Visit_Lastdate')->nullable();
             $table->String('DaysofARVRefill')->nullable();
