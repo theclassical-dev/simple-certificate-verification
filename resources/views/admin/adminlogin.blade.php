@@ -42,12 +42,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&amp;display=swap" rel="stylesheet">
 </head>
 
-<body class="sticky-header">
+<body class="sticky-header" style="background-color: #000;">
 
-    <main class="content-area" style="margin-top: 170px">
-        <div class="container">
+    <main class="content-area" style="margin-top: 70px">
+        <div class="col-md-4 offset-md-4 text-center">
+            <span style="font-size: 100px;"><i class="fa fa-hospital"></i></span>
+        </div>
+        <div class="col-md-8 offset-md-2 text-center">
+            <h2 style="color: #fff;" class="text-uppercase mt-2">Telehealth A tool for Improved Patients Care:</h2>
+            <p class="text-uppercase">A case study of PLHW at Adeoyo Maternity Hospital.</p>
+        </div>
+        <div class="container" style="margin-top: 70px">
             <div class="row">
-                <div class="col-lg-8 col-sm-12 col-12 offset-md-2 site-main">
+                <div class="col-lg-4 col-sm-6 col-12 offset-md-4 site-main">
+                    
+                    
                     <div class="page-content-block">
                         <div class="main-content">
                             <div class="clearfix">
@@ -55,7 +64,6 @@
                                     <div class="rtcl">
                                         <div class="row" id="rtcl-user-login-wrapper">
                                             <div class="col-md-12 rtcl-login-form-wrap">
-                                             
                                                 <form class="form-horizontal" method="POST">
                                                     @csrf
                                                     <div class="form-group">
@@ -63,7 +71,7 @@
                                                             E-mail
                                                             <strong class="rtcl-required">*</strong>
                                                         </label>
-                                                        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email" required autocomplete="email" autofocus>
                                                         @error('email')
                                                             <span class="invalid-feedback" role="alert">
                                                                 <strong>{{ $message }}</strong>
@@ -74,7 +82,7 @@
                                                         <label for="rtcl-user-pass" class="control-label">
                                                             Password <strong class="rtcl-required">*</strong>
                                                         </label>
-                                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" >
+                                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="*********" name="password" required autocomplete="current-password" >
                                                         @error('password')
                                                             <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
