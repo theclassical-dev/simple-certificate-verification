@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdminTable extends Migration
+class CreateCertificatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateAdminTable extends Migration
      */
     public function up()
     {
-        Schema::create('admin', function (Blueprint $table) {
+        Schema::create('certificates', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('role');
-            $table->string('email');
-            $table->string('password');
+            $table->string('uuid');
+            $table->string('user_name');
+            $table->string('organization');
+            $table->string('date')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateAdminTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('certificates');
     }
 }

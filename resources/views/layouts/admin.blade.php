@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="">
 
-	<title>Patient Records</title>
+	<title>Verification</title>
 
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{ asset('css/vendors_css.css')}}">
@@ -104,14 +104,20 @@
                         <span>DASHBOARD</span>  </a>
 					</li>
 					<li>
-						<a href="{{ route('admin.attendance') }}" title="">
-                       <i class="fa fa-dashboard"><span class="path1"></span><span class="path2"></span></i>
-                        <span>ATTENDANCE</span>  </a>
+						<a href="{{ route('admin.verification') }}" title="">
+                       <i class="fa fa-barcode"><span class="path1"></span><span class="path2"></span></i>
+                        <span>VERIFICATION</span>  </a>
 					</li>
 					<li>
-						<a href="{{ route('admin.upload') }}" title="">
-                       <i class="fa fa-dashboard"><span class="path1"></span><span class="path2"></span></i>
-                        <span>UPLOAD RECORDS</span>  </a>
+						<a href="{{ route('admin.users') }}" title="">
+                       <i class="fa fa-users"><span class="path1"></span><span class="path2"></span></i>
+                        <span>MANAGE USERS</span>  </a>
+					</li>
+					
+					<li>
+						<a href="{{ route('admin.admins') }}" title="">
+                       <i class="fa fa-id-badge"><span class="path1"></span><span class="path2"></span></i>
+                        <span>MANAGE ADMINS</span>  </a>
 					</li>
 					<li>
 						<a href="{{route('logout')}}" title=""

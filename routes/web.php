@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminRegController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\SmsController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +21,23 @@ use App\Http\Controllers\SmsController;
 */
 
 
-Route::any('/', [MainController::class,'index'])->name('admin.login');
+// Route::any('/', [MainController::class,'index'])->name('admin.login');
 Route::any('/send', [SmsController::class,'index'])->name('send');
+Route::any('/', [AuthController::class,'index'])->name('login');
+Route::any('/administrator', [MainController::class,'index'])->name('admin.login');
+Route::any('/register', [AuthController::class,'register'])->name('register');
 
 Route::prefix('admin')->group(function(){
     Route::any('/', [AdminController::class,'index'])->name('admin.dashboard');
-    Route::any('/attendance', [AdminController::class,'attendance'])->name('admin.attendance');
-    Route::any('/upload', [AdminController::class,'upload'])->name('admin.upload');
-    Route::any('/register', [AdminRegController::class,'register'])->name('admin.reg');
+    Route::any('/verification', [AdminController::class,'verification'])->name('admin.verification');
+    Route::any('/admins', [AdminController::class,'admins'])->name('admin.admins');
+    Route::any('/users', [AdminController::class,'users'])->name('admin.users');
 });
+Route::prefix('user')->group(function(){
+    Route::any('/', [HomeController::class,'index'])->name('user.dashboard');
+    Route::any('/search', [HomeController::class,'search'])->name('user.search');
+    Route::any('/certificates/{id}', [HomeController::class,'certificates'])->name('user.certificates');
+});
+
+
 

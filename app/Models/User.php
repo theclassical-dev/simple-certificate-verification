@@ -17,8 +17,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'uuid',
         'name',
         'email',
+        'organization',
+        'mobile',
+        'payment',
+        'status',
+        'date',
         'is_admin',
         'password',
     ];
@@ -42,8 +48,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function isAdmin()
-    {
-        return $this->is_admin;
+    public function certificate(){
+        return $this->hasMany(Certificate::class, 'user_name');
     }
+
+    // public function isAdmin()
+    // {
+    //     return $this->is_admin;
+    // }
 }
