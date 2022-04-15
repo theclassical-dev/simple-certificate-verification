@@ -25,6 +25,8 @@
 		<div class="row align-items-center justify-content-md-center h-p100">	
 			
 			<div class="col-12">
+				@include('layouts.msg')
+
 				<div class="row justify-content-center no-gutters">
 					<div class="col-lg-5 col-md-5 col-12">
 						<div class="bg-white rounded30 shadow-lg">

@@ -46,9 +46,9 @@
             <div class="col-12" style="border: 1px solid rgb(79, 79, 129)">
                 <div class="row">
                     <div class="col-6" style="background: rgb(197, 193, 193); height: 50px;">
-                        <h6 class="mt-10" style="color: white; font-size: 24px;">PAY WITH CARD</h6>
+                        <h6 class="mt-10" style="color: rgb(124, 61, 224); font-size: 24px;">PAY WITH CARD</h6>
                     </div>
-                    <div class="col-6" style=" height: 50px;">
+                    <div class="col-6" style=" height: ">
                     <h6 class="mt-10" style="font-size: 24px;">PAY WITH BANK</h6>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                                 <div class="box">
                                     <div class="box-body">
                                     <code>cvv</code>
-                                    Cvv:<input type="text" name="c" class="form-control input" style="height:55px;font-size:14pt;" placeholder="e.g 897" id="cvv" onchange="toggleButton()" required>						  
+                                    <input type="text" name="c" class="form-control input" style="height:55px;font-size:14pt;" placeholder="e.g 897" id="cvv" onchange="toggleButton()" required>						  
                                 </div>
                             </div>
                         </div>
