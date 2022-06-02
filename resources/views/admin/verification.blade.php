@@ -292,7 +292,7 @@
 			</div>
 			<div class="modal-footer modal-footer-uniform">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button class="btn btn-danger" type="submit" name="verify">Delete</button>
+				<button class="btn btn-danger" type="submit" name="verify">Verify</button>
 			</div>
 			</form>
 		</div>
