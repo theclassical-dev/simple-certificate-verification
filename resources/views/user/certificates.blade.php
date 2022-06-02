@@ -1,7 +1,9 @@
 @extends('layouts.front')
 
 @section("content")
-
+<div class="container">
+    <button type="button" onclick="window.print()" class="btn btn-primary" style="float: right">Print</button>
+</div>
 @if ($user->status != null)
     <div class="col-10 offset-1" style="margin-top: 100px;">
         <div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878; background-image: url(images/cert.jpg)">

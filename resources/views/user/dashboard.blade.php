@@ -38,18 +38,20 @@
     <div class="col-lg-4 offset-lg-4 col-12">
       <div class="box">
         <div class="box-body text-center">
+            <img src="images/b.jpg">
+
             <div class="col-12 text-uppercase" style="background: rgb(79, 79, 129); color: #fff">
                 <h4 class="box-title mt-3" style="color: #fff;">Certification Payment</h4><br>
                 <h5 class="box-title" style="color: #fff;">{{ auth()->user()->email}}</h5>
-                <p class="m-0">(NGN 10,000)</p> <hr>
+                <p class="m-0">(NGN 10,000)</p>
             </div>
             <div class="col-12" style="border: 1px solid rgb(79, 79, 129)">
                 <div class="row">
                     <div class="col-6" style="background: rgb(197, 193, 193); height: 50px;">
-                        <h6 class="mt-10" style="color: rgb(124, 61, 224); font-size: 24px;">PAY WITH CARD</h6>
+                        <h6 class="mt-10" style="color: rgb(124, 61, 224); font-size: 15px;">PAY WITH CARD</h6>
                     </div>
                     <div class="col-6" style=" height: ">
-                    <h6 class="mt-10" style="font-size: 24px;">PAY WITH BANK</h6>
+                    <h6 class="mt-10" style="font-size: 15px;">PAY WITH BANK</h6>
                     </div>
                 </div>
             </div><hr>
@@ -85,7 +87,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <a href="https://web.facebook.com/?_rdc=1&_rdr" id="sa-success"><button type="submit" name="pay" class="btn btn-primary" id="submitButton" disabled><span>Pay</span></button></a>
+                        <a href="" id="sa-success"><button type="submit" name="pay" class="btn btn-primary" id="submitButton" disabled><span>Pay</span></button></a>
                     </div>
                 </form>
             </div>
