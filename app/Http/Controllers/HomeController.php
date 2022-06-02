@@ -37,7 +37,9 @@ class HomeController extends Controller
                 return redirect()->route('user.search');
             }
         }
-        return view('user/dashboard');
+        $user = auth()->user();
+
+        return view('user/dashboard')->with('user', $user);
     }
 
     public function search(Request $request){
@@ -50,5 +52,23 @@ class HomeController extends Controller
         $user = auth()->user();
         // $check = auth()->user()->certificate()->find($id);
         return view('user/certificates')->with('user', $user);
+    }
+
+    public function payment(Request $request) {
+
+        if(isset($_POST['pay'])){
+            $request->validate([
+                'a'=> 'required',
+                'b'=> 'required',
+                'c'=> 'required',
+            ]);
+
+            $user = User::find($request->id);
+            if($user){
+                $user->update(['payment'=>'paid']);
+                return redirect()->route('user.search');
+            }
+        }
+        return view('user/payment');
     }
 }
