@@ -34,7 +34,8 @@
 							<div class="p-40">
 								<form action="" method="post">
                                     @csrf
-									<div class="form-group">  
+									<div class="form-group">
+                                        <label>Fullname *</label>  
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
@@ -48,6 +49,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label>Email *</label>  
+
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
@@ -61,6 +64,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label>Organization *</label>  
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
@@ -74,6 +78,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label>Mobile Number *</label>  
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
@@ -89,6 +94,8 @@
 									<div class="form-group">
                                         <div class="row">
                                             <div class="col-6">
+                                            <label>Password *</label>  
+
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
@@ -102,6 +109,8 @@
                                                 </div>
                                             </div>
                                             <div class="col-6">
+                                            <label>Confirm Password *</label>  
+
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
