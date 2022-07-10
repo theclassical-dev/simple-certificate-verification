@@ -4,7 +4,9 @@
 <div class="col-12">
     <div class="box bg-transparent no-shadow mb-0">
         <div class="box-header no-border px-0">
-            <h4 class="box-title">Media for lessons</h4>							
+            <h4 class="box-title">Dashboard</h4>
+            <a href="{{ route('user.search')}}"> <button class="btn btn-primary font-size-20 font-weight-600">Verify Certificate</button></a>
+            						
         </div>
     </div>
     <div class="box">
