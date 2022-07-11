@@ -37,7 +37,7 @@ Route::prefix('user')->group(function(){
     Route::any('/', [HomeController::class,'index'])->name('user.dashboard');
     Route::any('/search', [HomeController::class,'search'])->name('user.search');
     Route::any('/payments', [HomeController::class,'payment'])->name('user.payment');
-    Route::any('/certificates/{id}', [HomeController::class,'certificates'])->name('user.certificates');
+    Route::any('/certificates/{name}', [HomeController::class,'certificates'])->name('user.certificates');
 });
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Certificate;
+use App\Models\Cert;
 
 class HomeController extends Controller
 {
@@ -44,13 +45,26 @@ class HomeController extends Controller
     }
 
     public function search(Request $request){
+        if(isset($_POST['sub'])){
 
-        return view('user/search');
+           $data = $request->validate([
+                'name' => 'required',
+            ]);
+
+            if($data){
+                return redirect('/user/certificates/'.$request->name);
+            }
+
+            return back()->with('error', 'error..');
+        }
+        $n = $request->get('name');
+        return view('user/search', compact('n'));
     }
     
-    public function certificates($id){
+    public function certificates($name){
 
-        $user = auth()->user();
+        $user = User::where('name', $name)->first();
+        // $user = User::all()->first();
         // $check = auth()->user()->certificate()->find($id);
         return view('user/certificates')->with('user', $user);
     }
