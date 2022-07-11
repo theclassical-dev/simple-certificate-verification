@@ -9,6 +9,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\CertificateImport;
 Use App\Models\Admin;
 Use App\Models\User;
+Use App\Models\Cert;
 use Carbon\Carbon;
 use DB;
 
@@ -39,6 +40,7 @@ class AdminController extends Controller
 
         if(isset($_POST['create'])){
             $request->validate([
+                'cert_id' => 'required',
                 'name' => 'required',
                 'organization' => 'required',
             ]);
@@ -46,9 +48,10 @@ class AdminController extends Controller
             // $app = date('d-m-Y H:i:s');
             
 
-            $d = User::create([
+            $d = Cert::create([
+                'cert_id' => $request->input('cert_id'),
                 'name' => $request->input('name'),
-                'organization' => $request->input('organization'),
+                'department' => $request->input('organization'),
                 // 'status' => $request->input('status'),
             ]);
 
@@ -79,11 +82,11 @@ class AdminController extends Controller
                 'organization' => 'required',
             ]);
 
-            $update = User::find($request->id);
+            $update = Cert::find($request->id);
             if($update){
-                $ind['uuid'] =$request->get('uuid');
+                $ind['cert_id'] =$request->get('cert_id');
                 $ind['name'] =$request->get('name');
-                $ind['organization'] = $request->get('organization');
+                $ind['department'] = $request->get('organization');
 
                 $update->update($ind);
 
@@ -96,7 +99,7 @@ class AdminController extends Controller
                 'id' => 'required'
             ]);
 
-            $r = Certificate::find($request->id);
+            $r = Cert::find($request->id);
             if($r){
                
                 $r->delete($r);
@@ -114,10 +117,10 @@ class AdminController extends Controller
             $app = $request->date;
             $uuid = chr(rand(65, 90)).rand(3000,100000).date('y');
 
-            $r = User::find($request->id);
+            $r = Cert::find($request->id);
             if($r){
                
-                $r->update(['uuid'=>$uuid,'status' => 'verified', 'date' => Carbon::now()->format('d/F/Y')]);
+                $r->update(['status' => 'verified', 'date' => Carbon::now()->format('d/F/Y')]);
                 return back()->with('success', 'Successfully Verified');
             }else{
                 return back()->with('error','server error');

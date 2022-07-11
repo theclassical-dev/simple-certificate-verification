@@ -144,11 +144,15 @@
 				
 					{{ csrf_field() }}
 						<div class="form-group">
+							<label>Certificate number *</label>
+							<input type="text" name="cert_id" class="form-control" value="{{ old('name') }}" required>
+						</div>
+						<div class="form-group">
 							<label>Fullname *</label>
 							<input type="text" name="name" class="form-control" value="{{ old('name') }}" required>
 						</div>
 						<div class="form-group">
-							<label>Organization *</label>
+							<label>Department *</label>
 							<input type="text" name="organization" class="form-control" placeholder="e.g organization" value="{{ old('organization') }}" required>
 						</div>
 			</div>

@@ -24,24 +24,24 @@
     <!-- Basic Forms -->
       <div class="box">
         <div class="box-header with-border">
-          <h4 class="box-title">Form Sections</h4>
+          <h4 class="box-title">Certification Verification</h4>
         </div>
         <!-- /.box-header -->
         <form action="" method="POST">
             @csrf
             <div class="box-body">
-                <h4 class="mt-0 mb-20">1. Customer Info:</h4>
+                <h4 class="mt-0 mb-20">1. Personal Info:</h4>
                 <div class="form-group">
                     <label>Certificate Number:</label>
-                    <input type="text" name="cert_id" class="form-control" placeholder="Enter full name">
+                    <input type="text" name="cert_id" class="form-control" placeholder="certificate number" required>
                 </div>
                 <div class="form-group">
                     <label>Certificate Holder Name:</label>
-                    <input type="text" name="name" class="form-control" placeholder="Enter email">
+                    <input type="text" name="name" class="form-control" placeholder="Holder Name" required>
                 </div>
                 <div class="form-group">
                     <label>Department:</label>							
-                    <input type="text" name="department" class="form-control" placeholder="Enter departmentPhone number">
+                    <input type="text" name="department" class="form-control" placeholder="Department">
                 </div>
                 <hr>
                 <h4 class="mt-0 mb-20">2. Payment Info:</h4>
@@ -71,7 +71,7 @@
                             <div class="box">
                                 <div class="box-body">
                                     <code>mm:yy</code>
-                                    <input type="text" name="b"  class="form-control" style="height:55px;font-size:14pt;" placeholder="mm:yy" required>				  
+                                    <input type="text" name="b"  class="form-control" style="height:55px;font-size:14pt;" placeholder="mmyy" maxlength="4" required>				  
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                             <div class="box">
                                 <div class="box-body">
                                 <code>cvv</code>
-                                <input type="text" name="c" class="form-control input" style="height:55px;font-size:14pt;" placeholder="e.g 897" id="cvv" onchange="toggleButton()" required>						  
+                                <input type="text" name="c" class="form-control input" style="height:55px;font-size:14pt;" placeholder="e.g 897" id="cvv" onchange="toggleButton()"  maxlength="3" required>						  
                             </div>
                         </div>
                     </div>
@@ -96,14 +96,3 @@
       <!-- /.box -->			
 </div>
 @endsection
-
-{{-- <form action="" method="POST">
-    @csrf
-    <div class="form-group">
-        <label for="">Name</label>
-        <input type="text" name="name" id="">
-    </div>
-    <div class="form-group">
-        <button  type="submit" name="sub" class="btn btn-primary">Submit</button>
-    </div>
-</form> --}}

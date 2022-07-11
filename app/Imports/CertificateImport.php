@@ -16,13 +16,13 @@ class CertificateImport implements ToCollection, WithHeadingRow
     {
         foreach ($rows as $row) {
             $data=[
-                'uuid' => $row['certificate_id'],
+                'cert_id' => $row['certificate_id'],
                 'name'=>$row['fullname'],
-                'organization'=>$row['organization'],
+                'department'=>$row['organization'],
                 'date'=>$row['verification_date'],
                 'status'=>$row['verification_status'],
             ];
-            User::create($data);
+            Cert::create($data);
         }
     }
 }
