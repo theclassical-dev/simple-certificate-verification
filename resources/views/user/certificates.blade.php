@@ -4,7 +4,7 @@
 <div class="container">
     <button type="button" onclick="window.print()" class="btn btn-primary" style="float: right">Print</button>
 </div>
-@if ($user != null)
+@if ($user != null && $user->status != null)
     <div class="col-10 offset-1" style="margin-top: 100px;">
         <div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878; background-image: url(images/cert.jpg)">
             <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">

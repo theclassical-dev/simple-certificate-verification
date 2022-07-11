@@ -24,6 +24,7 @@
     <!-- Basic Forms -->
       <div class="box">
         <div class="box-header with-border">
+           <a href="{{ route('user.dashboard') }}"><i class="fa fa-long-arrow-left mr-3"></i></a>
           <h4 class="box-title">Certification Verification</h4>
         </div>
         <!-- /.box-header -->
@@ -87,8 +88,8 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-                <button type="submit" class="btn btn-rounded btn-danger">Cancel</button>
-                <button type="submit" name="sub" id="submitButton" disabled class="btn btn-rounded btn-success pull-right">Submit</button>
+                <a href="{{ route('user.dashboard') }}"><button type="button" class="btn btn-rounded btn-danger">Cancel</button></a>
+                <button type="submit" name="sub" id="submitButton" disabled class="btn btn-rounded btn-success pull-right">Verify</button>
                 {{-- <button type="submit" class="btn btn-rounded btn-success pull-right">Submit</button> --}}
             </div>
         </form>

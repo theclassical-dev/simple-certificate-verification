@@ -64,7 +64,6 @@ class HomeController extends Controller
     public function certificates($name){
 
         $user = Cert::where('name', $name)->first();
-        // $user = User::all()->first();
         // $check = auth()->user()->certificate()->find($id);
         return view('user/certificates')->with('user', $user);
     }
