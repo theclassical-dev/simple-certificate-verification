@@ -40,9 +40,9 @@
 
                 // $("#md-prop [name='id']").val(d.id);
                 $("#md-edit [name='id']").val(d.id);
-                $("#md-edit [name='uuid']").val(d.uuid);
+                $("#md-edit [name='cert_id']").val(d.cert_id);
                 $("#md-edit [name='name']").val(d.name);
-                $("#md-edit [name='organization']").val(d.organization);
+                $("#md-edit [name='organization']").val(d.department);
 				$("#md-edit [name='date']").val(d.date);
 				$("#md-edit [name='status']").val(d.status);
 				$("#md-edit .modal-title").text("Update appointment Record For : " + d.name);
@@ -81,7 +81,7 @@
 						</thead>
 						<tbody>
 							@php
-                                $q = DB::select("SELECT * FROM users ORDER BY id DESC");
+                                $q = DB::select("SELECT * FROM Certs ORDER BY id DESC");
                             @endphp
                             @forelse($q as $r)
 	                            @php
@@ -93,9 +93,9 @@
 										<button class="btn btn-primary btn-sm edtBtn" data-all="{{ (json_encode($r)) }}"><i class="fa fa-edit"></i></button>
 										<button class="btn btn-danger btn-sm delBtn" data-all="{{ (json_encode($x)) }}"><i class="fa fa-trash"></i></button>
 									</td>
-									<td>{{ $r->uuid}}</td>
+									<td>{{ $r->cert_id}}</td>
 									<td>{{ $r->name}}</td>
-									<td>{{ $r->organization}}</td>
+									<td>{{ $r->department}}</td>
 									@if ($r->date != null)
 										<td><h5 class="font-weight-600 mb-0 badge badge-pill badge-info">{{ $r->date}}</h5></td>
 									@else
@@ -219,7 +219,7 @@
 					
 					<div class="form-group">
 						<label>Certificate ID *</label>
-						<input type="text" name="uuid" class="form-control" value="{{ old('uuid') }}" required>
+						<input type="text" name="cert_id" class="form-control" value="{{ old('uuid') }}" required>
 						<input type="hidden" name="id">
 					</div>
 					<div class="form-group">
@@ -227,7 +227,7 @@
 						<input type="text" name="name" class="form-control" value="{{ old('name') }}" required>
 					</div>
 					<div class="form-group">
-						<label>Organization *</label>
+						<label>Department *</label>
 						<input type="text" name="organization" class="form-control" placeholder="e.g organization" value="{{ old('organization') }}" required>
 					</div>
 					<div class="form-group">
