@@ -26,7 +26,7 @@
     </div>
 @else
     <div class="col-4 offset-4" style="margin-top:150px; border:1px solid rgba(47, 22, 47, 0.333); ">
-        <h1 class="text-center text-uppercase">certificate is Yet to Verified</h1>
+        <h1 class="text-center text-uppercase">Certificate is yet to be verified</h1>
     </div>
 @endif
 
