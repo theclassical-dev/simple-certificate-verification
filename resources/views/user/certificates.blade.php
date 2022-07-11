@@ -9,8 +9,8 @@
         <div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878; background-image: url(images/cert.jpg)">
             <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
                 <img src="images/c1.jpg" style="width:120px; height:90px; float:left;">
-                <h6 style="float: right; margin-top: 10px;">{{ $user->uuid}}</h6>
-                <h1 style="font-size:50px; font-weight:bold">{{ $user->organization}}</h1>
+                <h5 style="float: right; margin-top: 10px;">{{ $user->cert_id}}</h5>
+                <h1 style="font-size:50px; font-weight:bold">{{ $user->department}}</h1>
                 <span  style="font-size:40px; font-weight:bold">Certificate of Completion</span>
                 <br><br>
                 <span style="font-size:25px"><i>This is to certify that</i></span>
