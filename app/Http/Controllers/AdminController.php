@@ -127,6 +127,24 @@ class AdminController extends Controller
             }
             
         }
+        if(isset($_POST['decline'])){
+            $request->validate([
+                'id' => 'required'
+            ]);
+
+            $app = $request->date;
+            $uuid = chr(rand(65, 90)).rand(3000,100000).date('y');
+
+            $r = Cert::find($request->id);
+            if($r){
+               
+                $r->update(['status' => 'declined', 'date' => Carbon::now()->format('d/F/Y')]);
+                return back()->with('success', 'Successfully Declined');
+            }else{
+                return back()->with('error','server error');
+            }
+            
+        }
        
         return view('admin/verification');
     }

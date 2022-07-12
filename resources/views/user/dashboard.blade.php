@@ -40,7 +40,7 @@
                                     @else
                                         <td class="text-fade"><span class="badge badge-sm badge-dot badge-warning mr-10"></span>Not yet Verify</td>
                                     @endif
-                                    @if($r->status != null)
+                                    @if($r->status != 'declined' )
                                         <td class="font-weight-500"><span class="badge badge-sm badge-dot badge-success mr-10"></span><a href="{{URL::to('/user/certificates/'.$r->name)}}">view</a></td>
                                     @else
 
