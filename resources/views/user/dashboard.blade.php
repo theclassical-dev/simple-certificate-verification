@@ -27,7 +27,7 @@
                                     <td class="font-weight-600">Holder Name</td>
                                     <td class="font-weight-600">Department</td>
                                     <td class="font-weight-600">Status</td>
-                                    <td class="font-weight-600">View</td>
+                                    {{-- <td class="font-weight-600">View</td> --}}
                                 </tr>
                                 @forelse ($cert as $r)
                                 <tr>
