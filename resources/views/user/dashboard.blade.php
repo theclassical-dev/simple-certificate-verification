@@ -35,11 +35,14 @@
                                     <td class="text-fade">{{ $r->cert_id}}</td>
                                     <td class="text-fade">{{ $r->name}}</td>
                                     <td class="text-fade">{{ $r->department}}</td>
-                                    <td class="text-fade">{{ $r->status}}</td>
+                                    @if($r->status != null)
+                                        <td class="text-fade">{{ $r->status}}</td>
+                                    @else
+                                        <td class="text-fade"><span class="badge badge-sm badge-dot badge-warning mr-10"></span>Not yet Verify</td>
+                                    @endif
                                     @if($r->status != null)
                                         <td class="font-weight-500"><span class="badge badge-sm badge-dot badge-success mr-10"></span><a href="{{URL::to('/user/certificates/'.$r->name)}}">view</a></td>
                                     @else
-                                        <td class="text-fade"><span class="badge badge-sm badge-dot badge-warning mr-10"></span>Not yet Verify</td>
 
                                     @endif
                                 </tr>
