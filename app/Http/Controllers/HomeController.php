@@ -40,17 +40,23 @@ class HomeController extends Controller
             }
         }
         $user = auth()->user();
-
-        return view('user/dashboard')->with('user', $user);
+        $cert = auth()->user()->cert;
+        return view('user/dashboard', compact('cert'))->with('user', $user);
     }
 
     public function search(Request $request){
         if(isset($_POST['sub'])){
 
-           $data = $request->validate([
-                'name' => 'required',
+           $request->validate([
+                'name' => 'required|unique:certs',
             ]);
 
+            $data = Cert::create([
+                'user_id'=> auth()->user()->id,
+                'cert_id'=> $request->input('cert_id'),
+                'name' => $request->input('name'),
+                'department' => $request->input('department'),
+            ]);
             if($data){
                 return redirect('/user/certificates/'.$request->name);
             }

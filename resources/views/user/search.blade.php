@@ -71,16 +71,17 @@
                         <div class="col-6">
                             <div class="box">
                                 <div class="box-body">
-                                    <code>mm:yy</code>
-                                    <input type="text" name="b"  class="form-control" style="height:55px;font-size:14pt;" placeholder="mmyy" maxlength="4" required>				  
-                                </div>
+                                    <code>cvv</code>
+                                    <input type="text" name="c" class="form-control input" style="height:55px;font-size:14pt;" placeholder="e.g 897" id="cvv" onchange="toggleButton()"  maxlength="3" required>
+                                </div>						  
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="box">
                                 <div class="box-body">
-                                <code>cvv</code>
-                                <input type="text" name="c" class="form-control input" style="height:55px;font-size:14pt;" placeholder="e.g 897" id="cvv" onchange="toggleButton()"  maxlength="3" required>						  
+                                    <code>mm:yy</code>
+                                    <input type="text" name="b"  class="form-control" style="height:55px;font-size:14pt;" placeholder="mmyy" maxlength="4" required>				  
+                                </div>
                             </div>
                         </div>
                     </div>

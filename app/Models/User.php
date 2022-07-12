@@ -51,7 +51,9 @@ class User extends Authenticatable
     public function certificate(){
         return $this->hasMany(Certificate::class, 'user_name');
     }
-
+    public function cert(){
+        return $this->hasMany(Cert::class, 'user_id');
+    }
     // public function isAdmin()
     // {
     //     return $this->is_admin;

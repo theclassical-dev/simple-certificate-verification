@@ -9,5 +9,10 @@ class Cert extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['cert_id', 'name','department','date','status'];
+
+    protected $fillable = ['user_id','cert_id','name','department','date','status'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
