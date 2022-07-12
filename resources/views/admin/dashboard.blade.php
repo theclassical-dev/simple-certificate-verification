@@ -16,14 +16,14 @@
 					<th>S/N</th>
 					<th>Certificate ID</th>
 					<th>Fullname</th>
-					<th>Organization</th>
+					<th>Department</th>
 					<th>Verification Date</th>
 					<th>Verification Status</th>
 				</tr>
 			</thead>
 			<tbody>
 				@php
-					$q = DB::select("SELECT * FROM users ORDER BY id");
+					$q = DB::select("SELECT * FROM certs ORDER BY id");
 				@endphp
 				@forelse($q as $r)
 					@php
@@ -31,9 +31,9 @@
 					@endphp
 					<tr>
 						<td>{{ $loop->iteration }}</td>
-						<td>{{ $r->uuid}}</td>
+						<td>{{ $r->cert_id}}</td>
 						<td>{{ $r->name}}</td>
-						<td>{{ $r->organization}}</td>
+						<td>{{ $r->department}}</td>
 						@if ($r->date != null)
 							<td><h5 class="font-weight-600 mb-0 badge badge-pill badge-info">{{ $r->date}}</h5></td>
 						@else
