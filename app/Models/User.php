@@ -52,7 +52,7 @@ class User extends Authenticatable
         return $this->hasMany(Certificate::class, 'user_name');
     }
     public function cert(){
-        return $this->hasMany(Cert::class, 'user_id');
+        return $this->hasMany(Cert::class);
     }
     // public function isAdmin()
     // {
